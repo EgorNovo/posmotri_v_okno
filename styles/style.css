@@ -45,7 +45,7 @@ ol {
   align-items: flex-end;
   gap: 30px;
   margin: 133px 30px;
-  padding-top: 133px;
+  padding: 133px 0;
   width: 1140px;
 }
 
@@ -71,6 +71,7 @@ input[type*="checkbox"],.search-form__label-text, button {
 .search-form {
   display: flex;
   justify-content: start;
+  align-items: flex-end;
   gap: 40px;
 }
 
@@ -276,6 +277,7 @@ label[class="search-form__label"]:focus-within {
   font-weight: 700;
   line-height: normal;
   border: 1px solid #FFF;
+  padding: 6px 0;
 }
 
 .search-form__submit-button {
@@ -285,7 +287,6 @@ label[class="search-form__label"]:focus-within {
 .more-button {
   width: 390px;
   margin: 0 2px;
-  padding: 6px 0;
 }
 
 .button:hover {
