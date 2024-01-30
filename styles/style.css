@@ -48,7 +48,7 @@ ol {
   display: flex;
   justify-content: start;
   align-items: flex-end;
-  gap: 30px;
+  gap: 26px;
   width: 1140px;
   margin: auto;
 }
@@ -60,10 +60,10 @@ ol {
 }
 
 .result__video  {
-  max-width: 711px;
-  max-height: 386px;
   width: 100%;
+  max-width: 711px;
   height: 100%;
+  max-height: 386px;
   object-fit: cover;
   object-position: center;
 }
@@ -80,8 +80,8 @@ ol {
 .search-form__fieldset {
   display: flex;
   flex-direction: column;
-  align-self: start;
   gap: 5px;
+  align-self: start;
   border: none;
 }
   
@@ -101,7 +101,6 @@ ol {
 
 /*----------------------form-textfield-------------------------*/
 .search-form__textfield {
-  appearance: none;
   min-width: 225px;
   border-style: none;
   border-top: 1px solid #FFF;
@@ -114,6 +113,7 @@ ol {
   font-style: normal;
   line-height: normal;
   background-color: transparent;
+  appearance: none;
 }
 
 .search-form__textfield:active {
@@ -124,7 +124,7 @@ ol {
   outline: none;
 }   
 
-.search-form__label:has(:focus-visible) .search-form__textfield{
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #FFF;
   outline-offset: 1px; 
 }
@@ -156,15 +156,6 @@ input[type="checkbox"]:checked + span {
   background-color: #FFF;
 }
 
-label[class="search-form__label"]:focus {
-  outline: none;
-}
-
-label[class="search-form__label"]:has(:focus-within) .search-form__checkbox-list {
-  outline: 1px solid #FFF;
-  outline-offset: 1px;
-} 
-
 /*-----------------form-button-------------------------*/
 
 .search-form__submit-button {
@@ -175,6 +166,7 @@ label[class="search-form__label"]:has(:focus-within) .search-form__checkbox-list
 
 .button {
   border: 1px solid #FFF;
+  margin: 2px;
   padding: 6px 0;
   color:#FFF;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -209,11 +201,13 @@ label[class="search-form__label"]:has(:focus-within) .search-form__checkbox-list
   display: flex;
   flex-direction:column;
   gap: 26px;
-  max-width: 399px;
+  /* отставил 20px под полосу прокрутки, а content отодвинул от края на 20 px */
+  min-width: (399 + 20)px;
+  padding-right: 20px;
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
@@ -238,6 +232,7 @@ li + li {
 .content__card-link {
   display: block;
   text-decoration: none;
+  min-width: 390px;
   margin: 2px;
 }
 
@@ -277,14 +272,15 @@ a {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  overflow: hidden;
+  max-width: 184px;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   font-style: normal;
   line-height: 100%; /* 30px */
   text-transform: uppercase;
   text-overflow: ellipsis;
-  overflow: hidden;
   text-wrap:nowrap;
 }
 
